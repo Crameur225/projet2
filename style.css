@@ -224,6 +224,7 @@ footer p{
    }
    .presentation img{
      width: 100%;
+     height: auto;
    }
    .presentation .picture h2{
     position: relative;
