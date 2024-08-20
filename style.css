@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root{
     --color-primaire: #009688;
-    --colorTitle: grey;
+    --colorTitle: rgb(81, 78, 78);
     --fontFamily: "Roboto", sans-serif;
 }
 *{
     margin: 0px;
     padding: 0px;
+    font-family: var(--fontFamily);
 }
 body{
     background-color: #fff;
@@ -27,19 +28,27 @@ section{
 .presentation .picture h2{
    position: absolute;
    font-family: var(--fontFamily);
-   top: 70%;
+   top: 50%;
    left: 5%;
 }
 
-.presentation .local{
-   padding: 10px;
+.presentation .locals{
+   padding-top: 5px;
 }
 .presentation img{
-    width: 350px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
 }
-.presentation p{
+.local {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.local p{
     color: var(--colorTitle);
+    padding-left: 10px;
+    font-weight: normal;
+    font-family: var(--fontFamily);
 }
 .presentation label{
     color: black;
@@ -52,6 +61,146 @@ section{
   'opsz' 24;
   color: var(--color-primaire);
 }
+.separator{
+    height: 1px;
+    margin: 25px;
+    background: #a4a0a0b3;
+}
+.competences{
+    padding-left: 10px;
+    font-family: var(--fontFamily);
+}
+.competence{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+.porgress{
+    width: 95%;
+    height: 18px;
+    background-color: #eae5e5d8;
+    border: 0px solid black;
+    border-radius: 15px;
+}
+.bar::before{
+    content: "90%";
+}
+.bar{
+    width: 90%;
+    height: 18px;
+    border: 0px solid black;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    background-color: var(--color-primaire);
+}
+.bar-one::before{
+    content: "80%";
+}
+.bar-one{
+    width: 80%;
+    height: 18px;
+    border: 0px solid black;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    background-color: var(--color-primaire);
+}
+.bar-two::before{
+ content: "60%";
+}
+.bar-two{
+    width: 60%;
+    height: 18px;
+    border: 0px solid black;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    background-color: var(--color-primaire);
+}
+.bar-three::before{
+    content: "50%";
+}
+.bar-three{
+    width: 50%;
+    height: 18px;
+    border: 0px solid black;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    background-color: var(--color-primaire);
+}
+
+.competence p{
+    margin-left: 10px;
+    color: var(--colorTitle);
+    font-family: var(--fontFamily);
+}
+label{
+    display: block;
+    font-family: var(--fontFamily);
+    padding: 15px 10px;
+}
+.skills {
+    margin: 20px 0px 30px 15px;
+}
+.skills .competence{
+    font-weight: 700;
+}
+.bar-four::before{
+    content: "100%";
+}
+.bar-four{
+    width: 100%;
+    height: 18px;
+    border: 0px solid black;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    background-color: var(--color-primaire);
+}
+.bar-five::before{
+    content: "30%";
+}
+.bar-five{
+    width: 30%;
+    height: 18px;
+    border: 0px solid black;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    background-color: var(--color-primaire);
+}
+/* BIOGRAPHIES */
+.biographies .local P{
+    color: #009688;
+}
+.biographies .title{
+    display: flex;
+    align-items: center;
+    padding: 30px 20px;
+    color: var(--colorTitle);
+}
+.current{
+    background-color: #009688;
+    color: white;
+}
+.biographies h1{
+    padding-left: 20px;
+}
+.biographies h3{
+    padding: 2% 3%;
+    color: var(--colorTitle);
+}
+.biographies p{
+    width: 70%;
+    padding: 0px 15px;
+}
+.biographies section{
+    padding-bottom: 20px;
+}
+/* FOOTER */
 footer{
     text-align: center;
     color: white;
@@ -60,5 +209,26 @@ footer{
 }
 footer p{
     padding: 10px;
-   
+}
+/* Media */
+@media all and (max-width: 1024px){
+   .conteneur{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   }
+   .presentation{
+    width: 100%;
+   }
+   .presentation img{
+     width: 100%;
+   }
+   .presentation .picture h2{
+    position: relative;
+   }
+   section{
+    margin: 10px;
+   }
 }
